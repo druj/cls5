@@ -18,13 +18,13 @@ function DonutShop(local, minCustomers, maxCustomers,
   };
   //Method that returns required number of donuts an hour
   this.getDonutsPerHour = function() {
-    var donutsPerhour = Math.floor(this.customerPerHour() * this.avgDonutsCstmr);
+     donutsPerhour = Math.floor(this.customerPerHour() * this.avgDonutsCstmr);
     return donutsPerhour;
   };
 
   //Method that returns required number of donuts a day
   this.getDonutsPerDay = function() {
-    var donsDay = Math.floor(this.getDonutsPerHour() * this.hoursOp);
+    var donsDay = Math.floor(donutsPerhour * this.hoursOp);
     return donsDay;
   };
 
